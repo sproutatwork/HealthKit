@@ -1,0 +1,3 @@
+{
+    NSHealthShareUsageDescription = "Pour synchroniser et suivre votre activité à partir de Santé, Sprout a besoin d'une autorisation pour lire les données.";
+}
