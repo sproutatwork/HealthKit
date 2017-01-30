@@ -51,8 +51,8 @@
       <string/>
     </config-file-->
 
-    <resource-file src="src/ios/en.lproj"/>
-    <resource-file src="src/ios/fr.lproj"/>
+    <resource-file src="src/ios/translations/en.lproj"/>
+    <resource-file src="src/ios/translations/fr.lproj"/>
 
     <header-file src="src/ios/WorkoutActivityConversion.h"/>
     <source-file src="src/ios/WorkoutActivityConversion.m"/>
