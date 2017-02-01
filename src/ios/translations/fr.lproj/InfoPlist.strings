@@ -1,3 +1,3 @@
 {
-    NSHealthShareUsageDescription = "Pour synchroniser et suivre votre activité à partir de Santé, Sprout a besoin d'une autorisation pour lire les données.";
+    NSHealthShareUsageDescription = "Sprout requiert votre permission pour lire les données de l'appli Santé afin de s'y synchroniser et suivre vos activités.";
 }
