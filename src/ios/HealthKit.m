@@ -1188,6 +1188,12 @@ static NSString *const HKPluginKeyUUID = @"UUID";
 
                                                   // Issue #47: commented this block since it resulted in callbacks not being delivered while the app was in the background
                                                   //dispatch_sync(dispatch_get_main_queue(), ^{
+                                                  UIBackgroundTaskIdentifier __block taskID = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+                                                      if (taskID != UIBackgroundTaskInvalid) {
+                                                          [[UIApplication sharedApplication] endBackgroundTask:taskID];
+                                                          taskID = UIBackgroundTaskInvalid;
+                                                      }
+                                                  }];
                                                   CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:sampleTypeString];
                                                   [result setKeepCallbackAsBool:YES];
                                                   [bSelf.commandDelegate sendPluginResult:result callbackId:command.callbackId];
